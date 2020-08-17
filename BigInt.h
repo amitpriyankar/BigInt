@@ -18,6 +18,10 @@ class BigInt {
         int size;
 
 
+        // karatsuba multiplication algorithm
+        void karatsubaMultiply(int* a, int n, int* b, int m, int* res);
+       
+
     public:
         
         //  Default constructor, incase no arguement is provided.
@@ -65,5 +69,11 @@ class BigInt {
 
         // print
         vector<int> print();
+
+        // Overload  '*' operator
+        BigInt operator *(BigInt&b);
+
+        // Overload '==' operator
+        bool operator ==(const BigInt& b) const;
 
 };
